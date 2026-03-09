@@ -1,0 +1,12 @@
+<!-- filtros -->
+<app-search-product (searchChange)="onSearch($event)"></app-search-product>
+<app-product-filter (sortChange)="onSort($event)" (saleFilterChange)="onSaleFilter($event)"></app-product-filter>
+
+<!-- muestra de productos -->
+<ul class="product-list">
+    @for (product of (products$ | async); track product.product_id) {
+    <li class="product-item">
+        <app-product-card [product]="product"></app-product-card>
+    </li>
+    }
+</ul>

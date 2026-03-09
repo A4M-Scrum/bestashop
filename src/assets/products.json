@@ -1,0 +1,402 @@
+[
+    {
+        "id": 1,
+        "name": "Producto 1",
+        "description": "Un artículo esencial diseñado para ofrecer durabilidad y un rendimiento excepcional en todas tus tareas diarias.",
+        "price": 25.50,
+        "image_url": "assets/products/product-1.jpg",
+        "onSale": false
+    },
+    {
+        "id": 2,
+        "name": "Producto 2",
+        "description": "Este modelo destaca por su diseño ergonómico y materiales de alta calidad que aseguran una larga vida.",
+        "price": 12.99,
+        "image_url": "assets/products/product-2.jpg",
+        "onSale": false
+    },
+    {
+        "id": 3,
+        "name": "Producto 3",
+        "description": "Una solución práctica y elegante que se adapta perfectamente a cualquier entorno de hogar u oficina moderna.",
+        "price": 45.00,
+        "image_url": "assets/products/product-3.jpg",
+        "onSale": false
+    },
+    {
+        "id": 4,
+        "name": "Producto 4",
+        "description": "Disfruta de la máxima comodidad con este accesorio versátil creado bajo los más altos estándares de fabricación.",
+        "price": 89.95,
+        "image_url": "assets/products/product-4.jpg",
+        "onSale": false
+    },
+    {
+        "id": 5,
+        "name": "Producto 5",
+        "description": "La combinación ideal entre tecnología avanzada y sencillez de uso para optimizar tu tiempo cada jornada.",
+        "price": 110.20,
+        "image_url": "assets/products/product-5.jpg",
+        "onSale": true
+    },
+    {
+        "id": 6,
+        "name": "Producto 6",
+        "description": "Estructura robusta y acabados premium definen a este producto líder en su categoría dentro del mercado actual.",
+        "price": 34.15,
+        "image_url": "assets/products/product-6.jpg",
+        "onSale": false
+    },
+    {
+        "id": 7,
+        "name": "Producto 7",
+        "description": "Optimiza tu espacio con este diseño compacto que no sacrifica potencia ni funcionalidad en ningún momento.",
+        "price": 67.80,
+        "image_url": "assets/products/product-7.jpg",
+        "onSale": false
+    },
+    {
+        "id": 8,
+        "name": "Producto 8",
+        "description": "Herramienta indispensable que garantiza resultados profesionales con un esfuerzo mínimo gracias a su ingeniería de vanguardia.",
+        "price": 15.30,
+        "image_url": "assets/products/product-8.jpg",
+        "onSale": false
+    },
+    {
+        "id": 9,
+        "name": "Producto 9",
+        "description": "Estilo contemporáneo y funcionalidad superior se unen en este objeto pensado para usuarios altamente exigentes hoy.",
+        "price": 99.99,
+        "image_url": "assets/products/product-9.jpg",
+        "onSale": true
+    },
+    {
+        "id": 10,
+        "name": "Producto 10",
+        "description": "Ligero pero resistente, este artículo es el compañero ideal para quienes buscan movilidad y eficiencia constante.",
+        "price": 54.45,
+        "image_url": "assets/products/product-10.jpg",
+        "onSale": false
+    },
+    {
+        "id": 11,
+        "name": "Producto 11",
+        "description": "Siente la diferencia con materiales suaves al tacto que ofrecen una experiencia de usuario realmente inigualable.",
+        "price": 8.50,
+        "image_url": "assets/products/product-11.jpg",
+        "onSale": false
+    },
+    {
+        "id": 12,
+        "name": "Producto 12",
+        "description": "Versatilidad total para múltiples aplicaciones garantizando siempre la seguridad y el bienestar de toda tu familia.",
+        "price": 42.10,
+        "image_url": "assets/products/product-12.jpg",
+        "onSale": false
+    },
+    {
+        "id": 13,
+        "name": "Producto 13",
+        "description": "Un clásico renovado que incorpora las últimas tendencias estéticas sin perder su esencia funcional y práctica.",
+        "price": 75.25,
+        "image_url": "assets/products/product-13.jpg",
+        "onSale": false
+    },
+    {
+        "id": 14,
+        "name": "Producto 14",
+        "description": "Diseñado meticulosamente para reducir el impacto ambiental manteniendo un desempeño superior en condiciones de uso intensivo.",
+        "price": 115.00,
+        "image_url": "assets/products/product-14.jpg",
+        "onSale": false
+    },
+    {
+        "id": 15,
+        "name": "Producto 15",
+        "description": "Excelente relación calidad precio en un paquete completo que incluye todo lo necesario para comenzar inmediatamente.",
+        "price": 29.90,
+        "image_url": "assets/products/product-15.jpg",
+        "onSale": true
+    },
+    {
+        "id": 16,
+        "name": "Producto 16",
+        "description": "Potencia y precisión se encuentran en esta unidad compacta diseñada para los entusiastas de la eficiencia moderna.",
+        "price": 63.40,
+        "image_url": "assets/products/product-16.jpg",
+        "onSale": false
+    },
+    {
+        "id": 17,
+        "name": "Producto 17",
+        "description": "Acabado minimalista que aporta un toque de sofisticación a cualquier estancia mientras cumple sus funciones perfectamente.",
+        "price": 19.15,
+        "image_url": "assets/products/product-17.jpg",
+        "onSale": true
+    },
+    {
+        "id": 18,
+        "name": "Producto 18",
+        "description": "La elección preferida por expertos debido a su fiabilidad probada y su facilidad de mantenimiento a largo plazo.",
+        "price": 88.00,
+        "image_url": "assets/products/product-18.jpg",
+        "onSale": false
+    },
+    {
+        "id": 19,
+        "name": "Producto 19",
+        "description": "Un accesorio dinámico que se ajusta a tus necesidades cambiantes proporcionando estabilidad y soporte en todo momento.",
+        "price": 5.75,
+        "image_url": "assets/products/product-19.jpg",
+        "onSale": true
+    },
+    {
+        "id": 20,
+        "name": "Producto 20",
+        "description": "Tecnología de última generación aplicada a un formato tradicional para mejorar la productividad de forma muy notable.",
+        "price": 105.60,
+        "image_url": "assets/products/product-20.jpg",
+        "onSale": false
+    },
+    {
+        "id": 21,
+        "name": "Producto 21",
+        "description": "Experimenta el confort absoluto con este diseño innovador que cuida cada detalle de tu postura y descanso.",
+        "price": 38.90,
+        "image_url": "assets/products/product-21.jpg",
+        "onSale": true
+    },
+    {
+        "id": 22,
+        "name": "Producto 22",
+        "description": "Fabricado bajo normativas estrictas de seguridad para ofrecerte tranquilidad total mientras disfrutas de sus amplias ventajas.",
+        "price": 14.25,
+        "image_url": "assets/products/product-22.jpg",
+        "onSale": true
+    },
+    {
+        "id": 23,
+        "name": "Producto 23",
+        "description": "Sistema integrado que facilita las tareas más complejas convirtiéndolas en procesos rápidos y muy sencillos de ejecutar.",
+        "price": 92.40,
+        "image_url": "assets/products/product-23.jpg",
+        "onSale": false
+    },
+    {
+        "id": 24,
+        "name": "Producto 24",
+        "description": "Colores vibrantes y texturas únicas definen esta pieza especial que resaltará en cualquier colección de productos exclusivos.",
+        "price": 27.85,
+        "image_url": "assets/products/product-24.jpg",
+        "onSale": true
+    },
+    {
+        "id": 25,
+        "name": "Producto 25",
+        "description": "Equilibrio perfecto entre ligereza y resistencia estructural ideal para llevar contigo durante tus viajes y aventuras diarias.",
+        "price": 59.99,
+        "image_url": "assets/products/product-25.jpg",
+        "onSale": true
+    },
+    {
+        "id": 26,
+        "name": "Producto 26",
+        "description": "Su interfaz intuitiva permite una curva de aprendizaje rápida para que aproveches todas sus funciones sin demoras.",
+        "price": 48.30,
+        "image_url": "assets/products/product-26.jpg",
+        "onSale": true
+    },
+    {
+        "id": 27,
+        "name": "Producto 27",
+        "description": "Resistente al agua y al polvo es perfecto para exteriores garantizando durabilidad extrema bajo condiciones climáticas adversas.",
+        "price": 72.15,
+        "image_url": "assets/products/product-27.jpg",
+        "onSale": false
+    },
+    {
+        "id": 28,
+        "name": "Producto 28",
+        "description": "Un elemento decorativo y funcional que transforma ambientes comunes en espacios llenos de personalidad y mucho estilo.",
+        "price": 18.50,
+        "image_url": "assets/products/product-28.jpg",
+        "onSale": true
+    },
+    {
+        "id": 29,
+        "name": "Producto 29",
+        "description": "Mecanismos de precisión que aseguran un funcionamiento silencioso y fluido evitando cualquier tipo de interrupción molesta.",
+        "price": 119.50,
+        "image_url": "assets/products/product-29.jpg",
+        "onSale": false
+    },
+    {
+        "id": 30,
+        "name": "Producto 30",
+        "description": "La mejor opción para quienes valoran la simplicidad y la efectividad en un solo paquete muy accesible.",
+        "price": 9.99,
+        "image_url": "assets/products/product-30.jpg",
+        "onSale": true
+    },
+    {
+        "id": 31,
+        "name": "Producto 31",
+        "description": "Desarrollado por expertos en ergonomía para prevenir la fatiga durante largas sesiones de trabajo o estudio intenso.",
+        "price": 55.60,
+        "image_url": "assets/products/product-31.jpg",
+        "onSale": false
+    },
+    {
+        "id": 32,
+        "name": "Producto 32",
+        "description": "Una pieza versátil que combina múltiples utilidades en un solo dispositivo ahorrando espacio y dinero a la vez.",
+        "price": 41.25,
+        "image_url": "assets/products/product-32.jpg",
+        "onSale": false
+    },
+    {
+        "id": 33,
+        "name": "Producto 33",
+        "description": "Acero inoxidable de grado superior que garantiza higiene y resistencia ante la corrosión en cualquier tipo de cocina.",
+        "price": 66.70,
+        "image_url": "assets/products/product-33.jpg",
+        "onSale": false
+    },
+    {
+        "id": 34,
+        "name": "Producto 34",
+        "description": "Optimizado para un consumo energético bajo ayudándote a ahorrar mientras disfrutas de un rendimiento de primer nivel.",
+        "price": 84.90,
+        "image_url": "assets/products/product-34.jpg",
+        "onSale": true
+    },
+    {
+        "id": 35,
+        "name": "Producto 35",
+        "description": "Incluye funciones inteligentes que se adaptan a tus hábitos diarios mejorando significativamente tu calidad de vida general.",
+        "price": 102.35,
+        "image_url": "assets/products/product-35.jpg",
+        "onSale": false
+    },
+    {
+        "id": 36,
+        "name": "Producto 36",
+        "description": "Elegancia atemporal que nunca pasa de moda convirtiéndose en una inversión inteligente para tu guardarropa o el hogar.",
+        "price": 22.45,
+        "image_url": "assets/products/product-36.jpg",
+        "onSale": false
+    },
+    {
+        "id": 37,
+        "name": "Producto 37",
+        "description": "Sistema de seguridad avanzado integrado para proteger lo que más quieres con la mayor tecnología disponible hoy.",
+        "price": 95.00,
+        "image_url": "assets/products/product-37.jpg",
+        "onSale": true
+    },
+    {
+        "id": 38,
+        "name": "Producto 38",
+        "description": "Su diseño modular permite futuras expansiones y personalizaciones según las necesidades específicas de cada usuario individualmente.",
+        "price": 51.80,
+        "image_url": "assets/products/product-38.jpg",
+        "onSale": false
+    },
+    {
+        "id": 39,
+        "name": "Producto 39",
+        "description": "Materiales reciclados procesados con alta tecnología para ofrecer un producto ecológico de altísima resistencia y belleza.",
+        "price": 13.60,
+        "image_url": "assets/products/product-39.jpg",
+        "onSale": true
+    },
+    {
+        "id": 40,
+        "name": "Producto 40",
+        "description": "Facilidad de limpieza y mantenimiento mínimo hacen de este artículo la solución ideal para personas con poco tiempo.",
+        "price": 31.20,
+        "image_url": "assets/products/product-40.jpg",
+        "onSale": false
+    },
+    {
+        "id": 41,
+        "name": "Producto 41",
+        "description": "Máxima portabilidad gracias a su estuche protector incluido que garantiza la integridad del producto en cada traslado.",
+        "price": 47.95,
+        "image_url": "assets/products/product-41.jpg",
+        "onSale": false
+    },
+    {
+        "id": 42,
+        "name": "Producto 42",
+        "description": "Ajustes precisos que permiten una configuración totalmente personalizada para adaptarse a las preferencias de cada cliente distinto.",
+        "price": 78.40,
+        "image_url": "assets/products/product-42.jpg",
+        "onSale": false
+    },
+    {
+        "id": 43,
+        "name": "Producto 43",
+        "description": "Iluminación eficiente y cálida que crea una atmósfera acogedora en cualquier habitación de tu casa de forma inmediata.",
+        "price": 26.50,
+        "image_url": "assets/products/product-43.jpg",
+        "onSale": false
+    },
+    {
+        "id": 44,
+        "name": "Producto 44",
+        "description": "Componentes internos reforzados para soportar un uso continuo sin perder velocidad ni capacidad de respuesta operativa.",
+        "price": 118.99,
+        "image_url": "assets/products/product-44.jpg",
+        "onSale": true
+    },
+    {
+        "id": 45,
+        "name": "Producto 45",
+        "description": "Textura antideslizante que proporciona un agarre seguro y firme incluso en las situaciones más exigentes de uso.",
+        "price": 11.25,
+        "image_url": "assets/products/product-45.jpg",
+        "onSale": true
+    },
+    {
+        "id": 46,
+        "name": "Producto 46",
+        "description": "Gran capacidad de almacenamiento en un tamaño reducido para mantener todos tus objetos organizados y siempre a mano.",
+        "price": 58.70,
+        "image_url": "assets/products/product-46.jpg",
+        "onSale": false
+    },
+    {
+        "id": 47,
+        "name": "Producto 47",
+        "description": "Compatible con la mayoría de accesorios estándar del mercado facilitando su integración en sistemas ya existentes.",
+        "price": 39.90,
+        "image_url": "assets/products/product-47.jpg",
+        "onSale": true
+    },
+    {
+        "id": 48,
+        "name": "Producto 48",
+        "description": "Diseño aerodinámico que mejora la eficiencia y reduce el ruido ambiental durante su funcionamiento a plena potencia.",
+        "price": 82.15,
+        "image_url": "assets/products/product-48.jpg",
+        "onSale": true
+    },
+    {
+        "id": 49,
+        "name": "Producto 49",
+        "description": "Certificado por organismos internacionales garantizando que recibes un producto seguro confiable y de alta gama técnica.",
+        "price": 93.60,
+        "image_url": "assets/products/product-49.jpg",
+        "onSale": false
+    },
+    {
+        "id": 50,
+        "name": "Producto 50",
+        "description": "La culminación de años de investigación para ofrecerte la experiencia definitiva en confort y tecnología aplicada.",
+        "price": 109.99,
+        "image_url": "assets/products/product-50.jpg",
+        "onSale": true
+    }
+]

@@ -1,0 +1,33 @@
+<div class="filter-container">
+
+    <label for="sort">Ordenar por:</label>
+
+    <select id="sort" (change)="onSortChange($event)">
+        <!-- ordenar por nombre del producto -->
+        <option value="">Sin orden</option>
+        <option value="name-asc">
+            Nombre (A-Z)
+        </option>
+        <option value="name-desc">
+            Nombre (Z-A)
+        </option>
+
+        <!-- ordenar por precio del producto -->
+        <option value="price-asc">
+            Precio (menor a mayor)
+        </option>
+        <option value="price-desc">
+            Precio (mayor a menor)
+        </option>
+    </select>
+
+    <!-- productos en oferta: 30% descuento -->
+    <div>
+        <label for="saleFilter">
+            Mostrar solo productos en oferta
+        </label>
+
+        <input id="saleFilter" type="checkbox" (change)="onSaleFilterChange($event)">
+    </div>
+
+</div>

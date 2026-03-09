@@ -1,0 +1,132 @@
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    padding: var(--space-3);
+}
+
+/* ── Formulario ─────────────────────────────────────────────── */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    width: 100%;
+    max-width: 400px;
+    padding: var(--space-4);
+    background-color: var(--color-bg-alt);
+    border: var(--border-width) solid var(--color-border);
+    border-top: var(--border-width-heavy) solid var(--color-accent);
+    box-shadow: var(--shadow-lg);
+}
+
+form::before {
+    content: 'Registrarse';
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--text-3xl);
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-text-primary);
+    line-height: 1;
+    margin-bottom: var(--space-2);
+}
+
+/* ── Grupos campo ───────────────────────────────────────────── */
+
+form>div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+form>div label {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+}
+
+form>div input {
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--color-text-primary);
+    background-color: var(--color-bg-raised);
+    border: var(--border-width) solid var(--color-border);
+    outline: none;
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background-color var(--transition-fast);
+}
+
+form>div input:focus {
+    border-color: var(--color-accent);
+    box-shadow: inset 0 0 0 1px var(--color-accent);
+    background-color: var(--color-surface);
+}
+
+form>div input::placeholder {
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+form>div input:invalid:not(:placeholder-shown) {
+    border-color: var(--color-error);
+    box-shadow: inset 0 0 0 1px var(--color-error);
+}
+
+/* ── Botón submit ───────────────────────────────────────────── */
+
+form>button[type="submit"] {
+    width: 100%;
+    padding: var(--space-2) var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--color-accent);
+    color: var(--color-text-inverse);
+    border: var(--border-width) solid var(--color-accent);
+    box-shadow: var(--shadow-accent-sm);
+    transition:
+        background-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+form>button[type="submit"]:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+    box-shadow: var(--shadow-accent-md);
+}
+
+form>button[type="submit"]:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+/* ── Mensajes ───────────────────────────────────────────────── */
+
+form>p {
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    max-width: unset;
+    padding: var(--space-2) var(--space-3);
+    border-left: var(--border-width-thick) solid var(--color-text-muted);
+    background-color: var(--color-bg-raised);
+}
+
+form>p.error {
+    color: var(--color-error);
+    border-left-color: var(--color-error);
+    background-color: rgba(192, 57, 43, 0.06);
+}

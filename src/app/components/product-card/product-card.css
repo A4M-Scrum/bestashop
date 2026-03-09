@@ -1,0 +1,201 @@
+.product-container {
+    height: 18rem;
+    width: 35rem;
+    padding: var(--space-3);
+    display: flex;
+    gap: var(--space-3);
+    background-color: var(--color-bg-alt);
+    border: var(--border-width) solid var(--color-border);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    transition:
+        background-color var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+.product-container:hover {
+    background-color: var(--color-bg-raised);
+    box-shadow: none;
+}
+
+/* ── Imagen ─────────────────────────────────────────────────── */
+
+.container-image {
+    position: relative;
+    flex-shrink: 0;
+    width: 15rem;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--color-surface);
+}
+
+.container-image::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, transparent 60%, rgba(14, 14, 14, 0.4) 100%);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+    pointer-events: none;
+}
+
+.product-container:hover .container-image::after {
+    opacity: 1;
+}
+
+.product-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-slow);
+}
+
+.product-container:hover .product-image {
+    transform: scale(1.04);
+}
+
+/* ── Badge oferta ───────────────────────────────────────────── */
+
+.badge-sale {
+    position: absolute;
+    top: var(--space-3);
+    left: 0;
+    background-color: var(--color-accent);
+    color: var(--color-text-inverse);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: var(--weight-medium);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    padding: var(--space-1) var(--space-sm);
+    z-index: var(--z-raised);
+    box-shadow: 3px 3px 0 var(--color-accent-dark);
+}
+
+/* ── Info ───────────────────────────────────────────────────── */
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-2);
+    flex: 1;
+    min-width: 0;
+    border-left: var(--border-width-thick) solid transparent;
+    padding-left: var(--space-3);
+    transition: border-color var(--transition-fast);
+}
+
+.product-container:hover .product-info {
+    border-left-color: var(--color-accent);
+}
+
+.product-info h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    letter-spacing: var(--tracking-wide);
+    line-height: var(--leading-tight);
+    color: var(--color-text-primary);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+.product-info p {
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    line-height: var(--leading-normal);
+    flex: 1;
+    max-width: unset;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* ── Precio ─────────────────────────────────────────────────── */
+
+.price {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-2);
+    padding-top: var(--space-2);
+    border-top: var(--border-width) solid var(--color-border);
+    width: 100%;
+}
+
+.normal-price {
+    font-family: var(--font-mono);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-medium);
+    color: var(--color-accent);
+    letter-spacing: var(--tracking-tight);
+}
+
+.original-price {
+    font-family: var(--font-mono);
+    font-size: var(--text-sm);
+    color: var(--color-text-muted);
+    text-decoration: line-through;
+    letter-spacing: var(--tracking-tight);
+}
+
+.discount-price {
+    font-family: var(--font-mono);
+    font-size: var(--text-lg);
+    font-weight: var(--weight-medium);
+    color: var(--color-accent);
+    letter-spacing: var(--tracking-tight);
+}
+
+/* ── Botón añadir al carrito ────────────────────────────────── */
+
+.product-info .button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    width: 100%;
+    margin-top: auto;
+    padding: var(--space-1) var(--space-3);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-widest);
+    text-transform: uppercase;
+    color: var(--color-text-inverse);
+    background-color: var(--color-accent);
+    border: var(--border-width) solid var(--color-accent);
+    cursor: pointer;
+    white-space: nowrap;
+    transition:
+        background-color var(--transition-fast),
+        border-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.product-info .button:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+}
+
+.product-info .button:active {
+    transform: translate(1px, 1px);
+}
+
+.product-info .button .icon {
+    flex-shrink: 0;
+}
+
+/* ── Tema claro ─────────────────────────────────────────────── */
+
+body.light-theme .product-container {
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 3px rgba(1, 10, 9, 0.08);
+}
+
+body.light-theme .product-container:hover {
+    box-shadow: none;
+}

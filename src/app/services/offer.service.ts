@@ -17,11 +17,13 @@ export class OfferService {
 
     const user = this.loginService.getCurrentUser();
 
+    let finalPrice = product.price;
+
     if (product.onSale && user) {
-      return product.price * (1 - this.discount);
+      finalPrice = product.price * (1 - this.discount);
     }
 
-    return product.price;
+    return Number(finalPrice.toFixed(2));
   }
 
   hasDiscount(product: Product): boolean {

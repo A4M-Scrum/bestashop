@@ -9,19 +9,29 @@
         </a>
     </nav>
 
-    <div class="header-controls">
+    <!-- botón hamburguesa -->
+    <button class="hamburger" (click)="toggleMenu()">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+            width="20px" height="20px" fill="currentColor">
+            <rect y="10.5" width="24" height="3" />
+            <rect y="3.5" width="24" height="3" />
+            <rect y="17.5" width="24" height="3" />
+        </svg>
+    </button>
+
+    <div class="header-controls" [class.is-open]="isMenuOpen">
         <div class="auth">
             @if (!currentUser) {
-            <a class="link" routerLink="/login">Acceder</a>
-            <a class="link" routerLink="/register">Registrarse</a>
+            <a class="link" routerLink="/login" (click)="isMenuOpen = false">Acceder</a>
+            <a class="link" routerLink="/register" (click)="isMenuOpen = false">Registrarse</a>
             } @else {
             <span>Hola, {{ currentUser!.name }}</span>
             <button class="button" (click)="logout()">Cerrar sesión</button> <!-- (click)="loginService.logout()" -->
             }
         </div>
-        
+
         @if (currentUser) {
-        <a class="cart-icon" routerLink="/cart">
+        <a class="cart-icon" routerLink="/cart" (click)="isMenuOpen = false">
             <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20px" height="20px"
                 fill="currentColor">
                 <g id="_01_align_center" data-name="01 align center">

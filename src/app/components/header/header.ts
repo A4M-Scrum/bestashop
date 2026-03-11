@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router, RouterModule } from '@angular/router';
 
@@ -6,7 +6,6 @@ import { LoginService } from '../../services/login.service';
 
 import { Theme } from '../theme/theme';
 import { CartService } from '../../services/cart.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-header',
@@ -19,6 +18,8 @@ import { Subscription } from 'rxjs';
   styleUrl: './header.css',
 })
 export class Header {
+
+  isMenuOpen = false;
 
   cartCount = 0;
 
@@ -41,5 +42,9 @@ export class Header {
 
   get currentUser() {
     return this.loginService.getCurrentUser();
+  }
+
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

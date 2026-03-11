@@ -525,8 +525,6 @@ hr {
     background-color: var(--color-bg);
     border-bottom: var(--border-width) solid var(--color-border);
     height: 64px;
-    display: flex;
-    align-items: center;
 }
 
 .navbar__inner {

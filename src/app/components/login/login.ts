@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { User } from '../../models/user.model';
 
 import { LoginService } from '../../services/login.service';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +17,7 @@ import { LoginService } from '../../services/login.service';
   styleUrl: './login.css',
 })
 export class Login {
-  
+
   email: string = '';
   password: string = '';
 
@@ -25,7 +26,10 @@ export class Login {
 
   currentUser: User | null = null;
 
-  constructor(private loginService: LoginService) { }
+  constructor(
+    private readonly loginService: LoginService,
+    private readonly cartService: CartService
+  ) { }
 
   onSubmit(): void {
 
@@ -45,6 +49,9 @@ export class Login {
     }
 
     this.currentUser = user;
+
+    this.cartService.reloadCart();
+
     this.message = `Bienvenido, ${user.name}`;
     this.isError = false;
 
@@ -54,6 +61,7 @@ export class Login {
 
   logout(): void {
     this.loginService.logout();
+    this.cartService.reloadCart();
     this.currentUser = null;
     this.message = '';
   }

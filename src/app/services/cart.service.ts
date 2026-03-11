@@ -1,27 +1,30 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, map, Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 import { Product } from '../models/product.model';
+import { LoginService } from './login.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CartService {
 
-  private readonly storageKey = 'cart_items';
+  private cartSubject: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>([]);
 
-  private cartSubject: BehaviorSubject<Product[]> = new BehaviorSubject<Product[]>(this.loadCart());
-
-  constructor() { }
+  constructor(private loginService: LoginService) {
+    this.cartSubject.next(this.loadCart());
+  }
 
   getCart(): Observable<Product[]> {
     return this.cartSubject.asObservable();
   }
 
   addProduct(product: Product): void {
-    const currentCart = this.cartSubject.value;
-    currentCart.push(product);
-    this.updateCart(currentCart);
+    const cart = [...this.cartSubject.value];
+
+    cart.push(product);
+
+    this.updateCart(cart);
   }
 
   removeProduct(productId: number): void {
@@ -51,13 +54,34 @@ export class CartService {
     }, 0);
   }
 
+  // almacenamiento de cada usuario
+
+  private getStorageKey(): string {
+
+    const user = this.loginService.getCurrentUser();
+
+    if (user) {
+      return `cart_items_user_${user.id}`;
+    }
+
+    return 'cart_items_guest';
+  }
+
   private loadCart(): Product[] {
-    const stored = localStorage.getItem(this.storageKey);
+
+    const stored = localStorage.getItem(this.getStorageKey());
+
     return stored ? JSON.parse(stored) : [];
   }
 
   private updateCart(cart: Product[]): void {
-    localStorage.setItem(this.storageKey, JSON.stringify(cart));
+
+    localStorage.setItem(this.getStorageKey(), JSON.stringify(cart));
+
     this.cartSubject.next(cart);
+  }
+
+  reloadCart(): void {
+    this.cartSubject.next(this.loadCart());
   }
 }

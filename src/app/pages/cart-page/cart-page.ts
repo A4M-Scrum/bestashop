@@ -7,7 +7,6 @@ import { CartService } from '../../services/cart.service';
 import { Product } from '../../models/product.model';
 
 import { Checkout } from '../../components/checkout/checkout';
-import { Header } from '../../components/header/header';
 
 @Component({
   selector: 'app-cart-page',
@@ -15,7 +14,6 @@ import { Header } from '../../components/header/header';
   imports: [
     CommonModule,
     Checkout,
-    Header,
   ],
   templateUrl: './cart-page.html',
   styleUrl: './cart-page.css'

@@ -36,6 +36,12 @@
     display: contents;
 }
 
+/* ── Paginación ─────────────────────────────────────────────── */
+
+:host>app-pagination {
+    display: block;
+}
+
 /* ── Responsive ─────────────────────────────────────────────── */
 
 @media (max-width: 768px) {

@@ -9,6 +9,7 @@ import { Product } from '../../models/product.model';
 import { ProductCard } from '../product-card/product-card';
 import { SearchProduct } from '../search-product/search-product';
 import { ProductFilter } from '../product-filter/product-filter';
+import { Pagination } from '../pagination/pagination';
 
 @Component({
   selector: 'app-product-list',
@@ -17,6 +18,7 @@ import { ProductFilter } from '../product-filter/product-filter';
     ProductCard,
     SearchProduct,
     ProductFilter,
+    Pagination,
   ],
   templateUrl: './product-list.html',
   styleUrl: './product-list.css',
@@ -28,8 +30,24 @@ export class ProductList {
   private searchTerm = '';
   private onlyOnSale = false;
 
+  currentPage = 1;
+  pageSize = 10;
+  totalItems = 0;
+
+  private paginate(products: Product[]): Product[] {
+    const start = (this.currentPage - 1) * this.pageSize;
+    const end = start + this.pageSize;
+    return products.slice(start, end);
+  }
+
   constructor(private productService: ProductService) {
-    this.products$ = this.productService.getProducts();
+    // this.products$ = this.productService.getProducts();
+    this.products$ = this.productService.getProducts().pipe(
+      map(products => {
+        this.totalItems = products.length;
+        return this.paginate(products);
+      })
+    );
   }
 
   // búsqueda de coincidencias en el nombre del producto y en su descripción
@@ -96,4 +114,21 @@ export class ProductList {
       })
     );
   } // onSaleFilter.fin
+
+  // cambiar de página en la paginación
+  // al hacer el cambio de página, se hace scroll hacia arriba para mejorar la UX
+  onPageChange(page: number) {
+    this.currentPage = page;
+
+    this.products$ = this.productService.getProducts().pipe(
+      map(products => {
+        this.totalItems = products.length;
+        return this.paginate(products);
+      })
+    );
+
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 0);
+  }
 }

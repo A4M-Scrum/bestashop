@@ -10,3 +10,8 @@
     </li>
     }
 </ul>
+
+<!-- paginación -->
+<app-pagination [totalItems]="totalItems" [pageSize]="pageSize" [currentPage]="currentPage"
+    (pageChange)="onPageChange($event)">
+</app-pagination>

@@ -1,0 +1,82 @@
+/* ============================================================
+   PAGINATION
+   ============================================================ */
+
+:host {
+    display: block;
+    margin-top: var(--space-4);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+    padding-top: var(--space-3);
+    border-top: var(--border-width) solid var(--color-border);
+}
+
+/* ── Botones base (heredan de .btn .btn--ghost .btn--sm) ────── */
+
+.pagination .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 var(--space-2);
+    font-family: var(--font-mono);
+    font-size: var(--text-xs);
+    letter-spacing: var(--tracking-wide);
+    color: var(--color-text-muted);
+    background: transparent;
+    border: var(--border-width) solid transparent;
+    cursor: pointer;
+    transition:
+        color var(--transition-fast),
+        border-color var(--transition-fast),
+        background-color var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+.pagination .btn:hover:not(:disabled) {
+    color: var(--color-accent);
+    border-color: var(--color-accent);
+    background-color: var(--color-accent-subtle);
+}
+
+.pagination .btn:active:not(:disabled) {
+    transform: translate(1px, 1px);
+}
+
+.pagination .btn:disabled {
+    opacity: 0.25;
+    cursor: not-allowed;
+}
+
+/* ── Página activa ──────────────────────────────────────────── */
+
+.pagination .pagination__btn--active {
+    color: var(--color-text-inverse);
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    box-shadow: var(--shadow-accent-sm);
+}
+
+.pagination .pagination__btn--active:hover {
+    background-color: var(--color-accent-hover);
+    border-color: var(--color-accent-hover);
+}
+
+/* ── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+    .pagination {
+        gap: 2px;
+    }
+
+    .pagination .btn {
+        min-width: 28px;
+        height: 28px;
+        font-size: 0.6rem;
+    }
+}

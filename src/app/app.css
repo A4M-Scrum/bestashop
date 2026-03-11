@@ -1,0 +1,15 @@
+/* ── Header ─────────────────────────────────────────────────── */
+
+.header {
+    /* El sticky lo gestiona el propio header component,
+       aquí solo aseguramos que no encoja */
+    flex-shrink: 0;
+}
+
+/* ── Footer ─────────────────────────────────────────────────── */
+
+.footer {
+    flex-shrink: 0;
+    border-top: var(--border-width) solid var(--color-border);
+    margin-top: auto;
+}

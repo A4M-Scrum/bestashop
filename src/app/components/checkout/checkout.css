@@ -106,3 +106,28 @@
     word-break: break-word;
     overflow-x: auto;
 }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+    .checkout {
+        gap: var(--space-3);
+    }
+
+    .checkout-btn {
+        font-size: var(--text-xs);
+        box-shadow: var(--shadow-accent-sm);
+    }
+
+    .checkout-btn:hover {
+        box-shadow: 4px 4px 0 var(--color-accent-dark);
+    }
+
+    .checkout-btn:active {
+        transform: translate(2px, 2px);
+    }
+
+    .ticket {
+        font-size: var(--text-xs);
+    }
+}

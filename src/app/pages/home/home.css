@@ -30,3 +30,17 @@
     border-top: var(--border-width) solid var(--color-border);
     margin-top: auto;
 }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .app-product-list {
+        padding-inline: var(--space-3);
+    }
+}
+
+@media (max-width: 480px) {
+    .app-product-list {
+        padding-inline: var(--space-2);
+    }
+}

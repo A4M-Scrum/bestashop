@@ -35,3 +35,21 @@
        el item la envuelve sin añadir restricciones */
     display: contents;
 }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    :host {
+        padding: var(--space-3) 0;
+    }
+
+    .product-list {
+        flex-direction: column;
+        gap: var(--space-3);
+    }
+
+    .product-item {
+        display: block;
+        width: 100%;
+    }
+}

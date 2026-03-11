@@ -130,3 +130,21 @@ form>p.error {
     border-left-color: var(--color-error);
     background-color: rgba(192, 57, 43, 0.06);
 }
+
+/* ── Responsive ─────────────────────────────────────────────── */
+
+@media (max-width: 480px) {
+    :host {
+        align-items: flex-start;
+        padding-top: var(--space-4);
+    }
+
+    form {
+        padding: var(--space-3);
+        box-shadow: none;
+    }
+
+    form::before {
+        font-size: var(--text-2xl);
+    }
+}

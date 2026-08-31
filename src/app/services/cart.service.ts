@@ -49,9 +49,8 @@ export class CartService {
   }
 
   getCartTotal(): number {
-    return this.cartSubject.value.reduce((total, product) => {
-      return total + product.price;
-    }, 0);
+    const total = this.cartSubject.value.reduce((total, product) => total + product.price, 0);
+    return Number.parseFloat(total.toFixed(2));
   }
 
   // almacenamiento de cada usuario

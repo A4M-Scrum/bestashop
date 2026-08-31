@@ -44,7 +44,7 @@
     @if (cartItems.length > 0) {
     <div class="cart-total">
         <span class="cart-eyebrow">Importe total</span>
-        <h3>{{ cartTotal }} €</h3>
+        <h3>{{ cartTotal | number:'1.2-2' }} €</h3>
     </div>
     }
 
